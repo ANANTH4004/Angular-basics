@@ -1,0 +1,9 @@
+<p>parent works!</p>
+
+<input
+  type="text"
+  [(ngModel)]="valueToPass"
+  placeholder="Enter value to pass to child"
+/>
+
+<app-child [valueFromParent]="valueToPass"></app-child>
