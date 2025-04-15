@@ -1,2 +1,22 @@
 <h1>Child Component</h1>
 <h1>Value from parent {{ valueFromParent() }}</h1>
+
+<div
+  style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  "
+>
+  <div>
+    <p>Model value (child): {{ fromParent() }}</p>
+  </div>
+  <div>
+    <input
+      type="text"
+      [(ngModel)]="fromParent"
+      placeholder="Enter value to pass to parent form child"
+    />
+  </div>
+</div>

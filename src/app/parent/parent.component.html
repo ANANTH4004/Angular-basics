@@ -1,9 +1,32 @@
 <p>parent works!</p>
 
+<div
+  style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  "
+>
+  <div>
+    <p>Model value (parent): {{ modelValueToPass }}</p>
+  </div>
+  <div>
+    <input
+      type="text"
+      [(ngModel)]="modelValueToPass"
+      placeholder="Enter value to pass to child"
+    />
+  </div>
+</div>
+
 <input
   type="text"
   [(ngModel)]="valueToPass"
   placeholder="Enter value to pass to child"
 />
 
-<app-child [childValue]="valueToPass"></app-child>
+<app-child
+  [childValue]="valueToPass"
+  [(fromParent)]="modelValueToPass"
+></app-child>

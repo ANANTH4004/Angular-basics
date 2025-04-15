@@ -13,4 +13,5 @@ import { CommonModule } from '@angular/common';
 export class ParentComponent {
   valueToPass = 'Hello from Parent Component';
   childValue = '';
+  modelValueToPass = '';
 }
