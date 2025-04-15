@@ -7,6 +7,12 @@ import { Component, input } from '@angular/core';
   styleUrl: './child.component.scss',
 })
 export class ChildComponent {
-  valueFromParent = input<string>('');
+  valueFromParent = input('', {
+    alias: 'childValue',
+    transform: transformToUppercase,
+  });
   childValue = 'Hello from Child Component';
+}
+function transformToUppercase(value: string | undefined): string {
+  return value?.toUpperCase() ?? '';
 }
