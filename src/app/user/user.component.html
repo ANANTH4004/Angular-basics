@@ -1,0 +1,11 @@
+<p>user works!</p>
+
+<input
+  #text
+  type="text"
+  value="user"
+  [(ngModel)]="uservalue"
+  (input)="valueChanges()"
+/>
+<p>{{ text.value }} {{ text.type }}</p>
+<p *ngIf="computedTextValue()">Computed Value: {{ computedTextValue() }}</p>
