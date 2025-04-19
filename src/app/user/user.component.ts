@@ -57,7 +57,14 @@ export class UserComponent implements OnInit, AfterViewInit {
     { name: 'David' },
   ];
 
+  newUsers = [
+    { name: 'Aldjvbasice' },
+    { name: 'Bodjcasjb' },
+    { name: 'Chadsjarlie' },
+    { name: 'Davkjdbcaid' },
+  ];
+
   addUser(): void {
-    this.users.push({ name: 'Anand' });
+    this.users = this.newUsers;
   }
 }
