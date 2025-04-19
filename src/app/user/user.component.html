@@ -1,4 +1,4 @@
-<p>user works!</p>
+<!-- <p>user works!</p>
 
 <input
   #text
@@ -8,4 +8,13 @@
   (input)="valueChanges()"
 />
 <p>{{ text.value }} {{ text.type }}</p>
-<p *ngIf="computedTextValue()">Computed Value: {{ computedTextValue() }}</p>
+<p *ngIf="computedTextValue()">Computed Value: {{ computedTextValue() }}</p> -->
+
+<input type="text" [(ngModel)]="searchTerm" placeholder="Search users" />
+<ul>
+  <li *ngFor="let user of users | filter : searchTerm">
+    {{ user.name }}
+  </li>
+</ul>
+
+<button (click)="addUser()">Add User</button>

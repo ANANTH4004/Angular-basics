@@ -18,4 +18,11 @@ export class ParentComponent {
   computedName = computed(() => {
     return this.name() + this.name();
   });
+  //pure function --> same input will give same output
+  doubleNumber(num: number): number {
+    return num * 2;
+  }
+  onChange(num: number): void {
+    this.valueToPass = 'Hello from Parent Component - updated' + num;
+  }
 }

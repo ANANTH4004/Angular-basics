@@ -12,12 +12,13 @@ import {
   ViewChild,
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { FilterPipe } from '../filter.pipe';
 
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
   styleUrl: './user.component.scss',
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, FilterPipe],
 })
 export class UserComponent implements OnInit, AfterViewInit {
   @ViewChild('text') textvalue: ElementRef | undefined; //old way
@@ -45,5 +46,18 @@ export class UserComponent implements OnInit, AfterViewInit {
       'UserComponent ngOnChanges',
       this.textBox()?.nativeElement.value
     );
+  }
+
+  // pipe example
+  searchTerm = '';
+  users = [
+    { name: 'Alice' },
+    { name: 'Bob' },
+    { name: 'Charlie' },
+    { name: 'David' },
+  ];
+
+  addUser(): void {
+    this.users.push({ name: 'Anand' });
   }
 }
