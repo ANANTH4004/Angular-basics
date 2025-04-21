@@ -2,10 +2,11 @@ import { Component, computed, signal } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ChildComponent } from '../child/child.component';
 import { CommonModule } from '@angular/common';
+import { DeferLoadingComponent } from '../defer-loading/defer-loading.component';
 
 @Component({
   selector: 'app-parent',
-  imports: [ChildComponent, CommonModule, FormsModule],
+  imports: [ChildComponent, CommonModule, FormsModule, DeferLoadingComponent],
   templateUrl: './parent.component.html',
   styleUrl: './parent.component.scss',
   providers: [ReactiveFormsModule],
