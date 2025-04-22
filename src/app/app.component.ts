@@ -4,7 +4,7 @@ import { ParentComponent } from './parent/parent.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ParentComponent],
+  imports: [RouterOutlet],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

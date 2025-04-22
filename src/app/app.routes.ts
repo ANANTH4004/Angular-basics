@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { UserComponent } from './user/user.component';
 import { DeferLoadingComponent } from './defer-loading/defer-loading.component';
 import { ParentComponent } from './parent/parent.component';
+import { ViewContentChildComponent } from './view-content-child/view-content-child.component';
 
 export const routes: Routes = [
   {
@@ -16,5 +17,9 @@ export const routes: Routes = [
   {
     path: 'parent',
     component: ParentComponent,
+  },
+  {
+    path: 'viewchild',
+    component: ViewContentChildComponent,
   },
 ];

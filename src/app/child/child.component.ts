@@ -12,9 +12,13 @@ export class ChildComponent {
     alias: 'childValue',
     transform: transformToUppercase,
   });
-  childValue = 'Hello from Child Component';
+  childValue1 = 'Hello from Child Component';
 
   fromParent = model();
+
+  sayHello() {
+    console.log('Hello from Child Component');
+  }
 }
 function transformToUppercase(value: string | undefined): string {
   return value?.toUpperCase() ?? '';
