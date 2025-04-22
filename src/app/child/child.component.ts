@@ -1,4 +1,10 @@
-import { Component, input, model, ModelSignal } from '@angular/core';
+import {
+  Component,
+  ContentChild,
+  input,
+  model,
+  ModelSignal,
+} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -8,6 +14,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './child.component.scss',
 })
 export class ChildComponent {
+  @ContentChild('projectedContent') projectedContent: any;
   valueFromParent = input('', {
     alias: 'childValue',
     transform: transformToUppercase,

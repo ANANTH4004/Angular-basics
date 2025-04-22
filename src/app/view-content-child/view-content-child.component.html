@@ -1,11 +1,24 @@
 <p>view-content-child works!</p>
 
 <div class="centerdiv">
-  <app-child
-    #childComponent
-    [childValue]="'from view child Component'"
-  ></app-child>
+  <app-child #childComponent [childValue]="'from view child Component'">
+    <p #projectedContent>this is the p tag value as a projectd content</p>
+  </app-child>
 </div>
 <input type="text" #inputValue placeholder="Type something here..." />
 
 <button (click)="changeInput()">Click me!</button>
+
+<div
+  style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  "
+>
+  <h1>This is the projected content</h1>
+  <ng-content></ng-content>
+</div>
+
+<button (click)="changeContent()">Change content</button>
