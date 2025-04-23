@@ -3,6 +3,7 @@ import { UserComponent } from './user/user.component';
 import { DeferLoadingComponent } from './defer-loading/defer-loading.component';
 import { ParentComponent } from './parent/parent.component';
 import { ViewContentChildComponent } from './view-content-child/view-content-child.component';
+import { DynamicComponentLoadingComponent } from './dynamic-component-loading/dynamic-component-loading.component';
 
 export const routes: Routes = [
   {
@@ -21,5 +22,9 @@ export const routes: Routes = [
   {
     path: 'viewchild',
     component: ViewContentChildComponent,
+  },
+  {
+    path: 'dynamic',
+    component: DynamicComponentLoadingComponent,
   },
 ];

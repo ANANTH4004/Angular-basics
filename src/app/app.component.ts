@@ -5,7 +5,7 @@ import { ViewContentChildComponent } from './view-content-child/view-content-chi
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ViewContentChildComponent],
+  imports: [RouterOutlet],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
