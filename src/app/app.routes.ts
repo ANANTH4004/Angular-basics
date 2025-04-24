@@ -4,6 +4,7 @@ import { DeferLoadingComponent } from './defer-loading/defer-loading.component';
 import { ParentComponent } from './parent/parent.component';
 import { ViewContentChildComponent } from './view-content-child/view-content-child.component';
 import { DynamicComponentLoadingComponent } from './dynamic-component-loading/dynamic-component-loading.component';
+import { ViewConRefComponent } from './view-con-ref/view-con-ref.component';
 
 export const routes: Routes = [
   {
@@ -26,5 +27,9 @@ export const routes: Routes = [
   {
     path: 'dynamic',
     component: DynamicComponentLoadingComponent,
+  },
+  {
+    path: 'viewcon',
+    component: ViewConRefComponent,
   },
 ];
