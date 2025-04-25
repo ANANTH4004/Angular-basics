@@ -13,11 +13,15 @@ import { WeatherContentComponent } from '../dynamic-component-loading/widgets/we
   styleUrl: './view-con-ref.component.scss',
 })
 export class ViewConRefComponent {
-  @ViewChild('dynamicComponetRef', { read: ViewContainerRef, static: true })
+  // @ViewChild('dynamicComponetRef', { read: ViewContainerRef, static: true })
   container1!: ViewContainerRef;
-  container = viewChild('dynamicComponetRef', { read: ViewContainerRef });
+  container = viewChild.required('dynamicComponetRef', {
+    read: ViewContainerRef,
+  });
   ngOnInit() {
-    //this.container.createComponent(WeatherContentComponent);
-    this.container1.createComponent(WeatherContentComponent);
+    // this.container1.createComponent(WeatherContentComponent);
+  }
+  loadComponent() {
+    this.container().createComponent(WeatherContentComponent);
   }
 }
