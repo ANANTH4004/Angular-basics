@@ -5,8 +5,16 @@ import { ParentComponent } from './parent/parent.component';
 import { ViewContentChildComponent } from './view-content-child/view-content-child.component';
 import { DynamicComponentLoadingComponent } from './dynamic-component-loading/dynamic-component-loading.component';
 import { ViewConRefComponent } from './view-con-ref/view-con-ref.component';
+import { RouterExampleComponent } from './router-example/router-example.component';
+import { resolverFunction } from './utils/router.utils';
 
 export const routes: Routes = [
+  {
+    path: 'router',
+    component: RouterExampleComponent,
+    //  data: { title: 'Router Example', value: 'Router value' },
+    resolve: { data: resolverFunction },
+  },
   {
     path: 'user',
     loadComponent: () =>
