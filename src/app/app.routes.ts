@@ -9,6 +9,7 @@ import { RouterExampleComponent } from './router-example/router-example.componen
 import { resolverFunction } from './utils/router.utils';
 import { Children1Component } from './router-example/children/children1/children1.component';
 import { Children2Component } from './router-example/children/children2/children2.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 export const routes: Routes = [
   {
@@ -51,5 +52,9 @@ export const routes: Routes = [
   {
     path: 'viewcon',
     component: ViewConRefComponent,
+  },
+  {
+    path: 'rxjs',
+    component: RxjsComponent,
   },
 ];
