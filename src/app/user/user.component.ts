@@ -13,12 +13,13 @@ import {
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FilterPipe } from '../filter.pipe';
+import { CustomNumberInputComponent } from '../custom-number-input/custom-number-input.component';
 
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
   styleUrl: './user.component.scss',
-  imports: [FormsModule, CommonModule, FilterPipe],
+  imports: [FormsModule, CommonModule, FilterPipe, CustomNumberInputComponent],
 })
 export class UserComponent implements OnInit, AfterViewInit {
   @ViewChild('text') textvalue: ElementRef | undefined; //old way
