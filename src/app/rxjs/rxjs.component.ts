@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-rxjs',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './rxjs.component.html',
   styleUrl: './rxjs.component.scss',
 })
