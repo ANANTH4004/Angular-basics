@@ -10,6 +10,7 @@ import { resolverFunction } from './utils/router.utils';
 import { Children1Component } from './router-example/children/children1/children1.component';
 import { Children2Component } from './router-example/children/children2/children2.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
+import { SignalComponent } from './signal/signal.component';
 
 export const routes: Routes = [
   {
@@ -56,5 +57,9 @@ export const routes: Routes = [
   {
     path: 'rxjs',
     component: RxjsComponent,
+  },
+  {
+    path: 'signal',
+    component: SignalComponent,
   },
 ];
