@@ -12,7 +12,9 @@ export class SignalComponent {
   refObject = {
     name: 'Angular',
   };
-  signalObject = signal([this.refObject], { equal: _.isEqual });
+  signalObject = signal([this.refObject], {
+    equal: (val) => val.values.length == 1,
+  });
   computedSignal = computed(() => {
     return this.signalObject()[0].name + ' is awesome!';
   });
