@@ -19,10 +19,11 @@ export class RxjsComponent implements OnInit {
     promise.then((res) => console.log(res));
     console.log('Promise finished!');
 
-    //Observable example lazily loading
+    //Observable example lazily loading`
     const observable = new Observable((observer) => {
       console.log('Observable started!');
       observer.next('Observable emitted!');
+      observer.next('Observable emitted again!');
       observer.complete();
     });
     observable.subscribe({
